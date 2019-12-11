@@ -9,5 +9,5 @@ Findings should not be taken conclusively, as this project is in its early stage
 * For tables of findings, see the [findings-tables](findings-tables/) folder or [findings-images](findings/images/).
 * For the text of the sample articles analyzed, see the [sample-articles](sample-articles/) folder.
 * For the program itself, see [hedging.py](hedging.py).
-* For a list of URLS and dates of access for the sample articles, see XX.
+* For a list of URLS and dates of access for the sample articles, see [article-access-info.md](article-access-info.md).
 * For a full accounting of article selection methodology, see XX.
