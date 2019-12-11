@@ -1,5 +1,5 @@
 # Hedging in Breaking News
-## A study of how journalists use hedging when reporting on breaking news
+## Supplementary materials related to a paper studying how journalists use hedging when reporting on breaking news
 
 This preliminary study is a work in progress examining how journalists use hedge words and phrases in breaking news reporting.
 
