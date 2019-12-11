@@ -39,7 +39,9 @@ test_articles = [open(os.path.join(THIS_FOLDER, 'sample-articles/infowars-1.txt'
                  open(os.path.join(THIS_FOLDER, 'sample-articles/huffpost-1.txt'),"r+").readlines(), #8
                  open(os.path.join(THIS_FOLDER, 'sample-articles/huffpost-2.txt'),"r+").readlines(), #9
                  open(os.path.join(THIS_FOLDER, 'sample-articles/usatoday-1.txt'),"r+").readlines(), #10
-                 open(os.path.join(THIS_FOLDER, 'sample-articles/usatoday-2.txt'),"r+").readlines() #11
+                 open(os.path.join(THIS_FOLDER, 'sample-articles/usatoday-2.txt'),"r+").readlines(), #11
+                 open(os.path.join(THIS_FOLDER, 'sample-articles/motherjones-1.txt'),"r+").readlines(), #12
+                 open(os.path.join(THIS_FOLDER, 'sample-articles/motherjones-2.txt'),"r+").readlines() #13
                  ]
 
 #### Clean up the data ####
@@ -178,6 +180,18 @@ article_dict = {
                    'lines' : test_articles_c[11][1:],
                    'article_text': combine_lines(test_articles_c[11]),
                    'article_id': 'infowars1'
+                   }
+                ],
+        'motherjones' : [
+                  {'title' : get_title(test_articles_c[12]),
+                   'lines' : test_articles_c[12][1:],
+                   'article_text': combine_lines(test_articles_c[12]),
+                   'article_id': 'motherjones1'
+                   },
+                  {'title' : get_title(test_articles_c[13]),
+                   'lines' : test_articles_c[13][1:],
+                   'article_text': combine_lines(test_articles_c[13]),
+                   'article_id': 'motherjones2'
                    }
                 ]
         }
@@ -338,7 +352,7 @@ avg_hedge_sents(article_dict['infowars'])
 ### Store HEDGE AVERAGES
 pub_dict = {
         'infowars' :
-            {'ideology' : 'RCON',
+            {'ideology' : 'ER',
              'avg_hedge_word_perc' : avg_hedge_words(article_dict['infowars']),
              'avg_hedge_sent_perc' : avg_hedge_sents(article_dict['infowars'])
              },
@@ -367,6 +381,11 @@ pub_dict = {
              'avg_hedge_word_perc' : avg_hedge_words(article_dict['usatoday']),
              'avg_hedge_sent_perc' : avg_hedge_sents(article_dict['usatoday'])
              },
+        'motherjones' :
+            {'ideology' : 'LL',
+             'avg_hedge_word_perc' : avg_hedge_words(article_dict['motherjones']),
+             'avg_hedge_sent_perc' : avg_hedge_sents(article_dict['motherjones'])
+             }
         }
 
 
@@ -418,7 +437,8 @@ article_info_df['publication']=['infowars', 'infowars',
                 'breitbart', 'breitbart', 
                 'foxnews', 'foxnews', 
                 'huffpost', 'huffpost', 
-                'usatoday', 'usatoday']
+                'usatoday', 'usatoday',
+                'motherjones', 'motherjones']
 
         
 
